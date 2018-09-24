@@ -3,15 +3,19 @@ require 'pry'
 class Hash
   def keys_of(*arguments)
     array = []
-    arguments.each do |key, value|
-      binding.pry
+    arguments.each do |arg|
+      self.each do |key, value|      
+        if arg == value
+          matches << key
+          binding.pry
+        end
+      end
     end
     array
   end
-
 end
 
-#def animals
+
 #  animals = {
 #    "sugar glider"=>"Australia",
 #    "aye-aye"=> "Madagascar",
@@ -20,4 +24,4 @@ end
 #    "tomato frog"=>"Madagascar",
 #    "koala"=>"Australia"
 #  }
-#end
+
