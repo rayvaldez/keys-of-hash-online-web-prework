@@ -4,9 +4,9 @@ class Hash
   def keys_of(*arguments)
     array = []
     arguments.each do |arg|
-      self.each do |key, value|      
+      self.each do |key, value|
         if arg == value
-          matches << key
+          array << key
           binding.pry
         end
       end
@@ -24,4 +24,3 @@ end
 #    "tomato frog"=>"Madagascar",
 #    "koala"=>"Australia"
 #  }
-
