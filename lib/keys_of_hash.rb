@@ -7,7 +7,6 @@ class Hash
       self.each do |key, value|
         if arg == value
           array << key
-          binding.pry
         end
       end
     end
